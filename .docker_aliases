@@ -1,2 +1,0 @@
-alias dc="docker-compose"
-alias dcb="docker-compose build"

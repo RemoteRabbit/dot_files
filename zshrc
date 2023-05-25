@@ -104,7 +104,16 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source .docker_aliases
+source ~/.docker_aliases
+source ~/.kube-aliases
+source ~/.aliases
+alias python="python3"
+alias vim="nvim"
+
+source <(kubectl completion zsh)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Created by `pipx` on 2022-11-11 18:42:38
+export PATH="$PATH:/Users/tristanjahnke/.local/bin"
