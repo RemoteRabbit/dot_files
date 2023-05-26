@@ -96,6 +96,10 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+export EDITOR='nvim'
+
+export TMUXIFIER_LAYOUT_PATH=~/dot_files/tmux-layouts
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -104,11 +108,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/.docker_aliases
-source ~/.kube-aliases
-source ~/.aliases
 alias python="python3"
 alias vim="nvim"
+alias tmf="tmuxifier"
+alias tmfl="tmuxifier load-session "
 
 source <(kubectl completion zsh)
 
@@ -118,3 +121,7 @@ source <(kubectl completion zsh)
 # Created by `pipx` on 2022-11-11 18:42:38
 export PATH="$PATH:/Users/tristanjahnke/.local/bin"
 export PATH="$PATH:/Users/tristanjahnke/tmux-spotify-info"
+export PATH="$HOME/.tmuxifier/bin:$PATH"
+
+# tmuxifier
+eval "$(tmuxifier init -)"

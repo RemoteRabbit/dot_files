@@ -9,6 +9,7 @@ brew bundle install --file ~/dot_files/Brewfile
 # Tmux setup
 mkdir -p ~/.config/tmux
 ln -s -f ~/dot_files/tmux.conf ~/.config/tmux/tmux.conf
+git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
 
 # Zsh setup
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

@@ -2,7 +2,9 @@
 Central storage of dot files for easy pulling and use on other machines.
 
 ## Resources
-Great culmination of other resources for [tmux](https://github.com/rothgar/awesome-tmux#plugins)
+- Great culmination of other resources for [tmux](https://github.com/rothgar/awesome-tmux#plugins)
+- [Packer](https://github.com/wbthomason/packer.nvim) for neovim
+
 
 | Filename | Description |
 | --------------- | --------------- |
