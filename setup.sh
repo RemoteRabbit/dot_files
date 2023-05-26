@@ -16,3 +16,5 @@ ln -s -f ~/dot_files/zshrc ~/.zshrc
 
 # Neovim setup
 git clone https://github.com/RemoteRabbit/nvim-setup.git ~/.config/nvim
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim

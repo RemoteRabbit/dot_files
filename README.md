@@ -1,6 +1,9 @@
 # dot_files
 Central storage of dot files for easy pulling and use on other machines.
 
+## Resources
+Great culmination of other resources for [tmux](https://github.com/rothgar/awesome-tmux#plugins)
+
 | Filename | Description |
 | --------------- | --------------- |
 | [.zshrc](.zshrc) | Base rc file with core oh-my-zsh with theme(s) and plugins along with all imports. | 
