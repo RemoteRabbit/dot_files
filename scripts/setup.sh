@@ -8,7 +8,7 @@ brew bundle install --file "$HOME/dot_files/homebrew/Brewfile"
 
 # Tmux setup
 mkdir -p "$HOME/.config/tmux"
-ln -s -f "$HOME/dot_files/tmux.conf" "$HOME/.config/tmux/tmux.conf"
+ln -s -f "$HOME/dot_files/tmux/tmux.conf" "$HOME/.config/tmux/tmux.conf"
 git clone https://github.com/jimeh/tmuxifier.git "$HOME/.tmuxifier"
 tmux source-file "$HOME/.config/tmux/tmux.conf"
 
