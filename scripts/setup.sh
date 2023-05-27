@@ -17,6 +17,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ln -s -f "$HOME/dot_files/zshrc" "$HOME/.zshrc"
 
 # Neovim setup
-git clone https://github.com/RemoteRabbit/nvim-setup.git "$HOME/.config/nvim"
+mkdir -p "$HOME/.config/nvim"
+ln -s -f "$HOME/dot_files/nvim/" "$HOME/.config/nvim"
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim"
