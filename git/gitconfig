@@ -1,0 +1,90 @@
+# Resources:
+# - https://github.com/jessfraz/dotfiles/blob/master/.gitconfig
+
+[alias]
+	alias=!git config -l | grep ^alias | cut -c 7- | sort
+    c = clone --recursive
+    ca = !git add -A && git commit -av
+    # Remove branches that have already been merged with master
+	# a.k.a. ‘delete merged’
+	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d; git remote -v update -p"
+    go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+    l = log --pretty=oneline -n 20 --graph --abbrev-commit
+   	lg = log --color --decorate --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an (%G?)>%Creset' --abbrev-commit
+    s = status -s
+    p = !"git pull; git submodule foreach git pull origin master"
+
+    # Show verbose output about tags, branches or remotes
+	tags = tag -l
+	branches = branch -a
+	remotes = remote -v
+
+[color]
+	ui = auto
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red
+	new = green
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[commit]
+	gpgsign = true
+
+[core]
+	editor = vim
+
+[help]
+	autocorrect = 1
+
+[init]
+  defaultBranch = main
+
+[merge]
+	log = true
+
+[pull]
+    rebase = true
+
+[push]
+	default = simple
+	autoSetupRemote = true
+
+[remote "origin"]
+	fetch = +refs/pull/*/head:refs/remotes/origin/pull/*
+
+[url "git@github.com:github"]
+	insteadOf = "https://github.com/github"
+	insteadOf = "github:github"
+	insteadOf = "git://github.com/github"
+
+[url "git@github.com:"]
+	pushInsteadOf = "https://github.com/"
+	pushInsteadOf = "github:"
+	pushInsteadOf = "git://github.com/"
+
+[url "git://github.com/"]
+	insteadOf = "github:"
+
+[url "git@gist.github.com:"]
+	insteadOf = "gst:"
+	pushInsteadOf = "gist:"
+	pushInsteadOf = "git://gist.github.com/"
+
+[url "git://gist.github.com/"]
+	insteadOf = "gist:"
+
+[user]
+	name = Tristan Jahnke
+    signingkey = C2A87E5E27C1192142FB4746382AEE5ED97A61C7 
+    username = RemoteRabbit
