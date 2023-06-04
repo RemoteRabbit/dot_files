@@ -8,6 +8,7 @@ if [[ '$OSTYPE' == 'linux-gnu' ]]; then
 fi
 
 # Git setup
+ln -s -f $HOME/dot_files/git/gitconfig $HOME/.gitconfig
 
 # Tmux setup
 mkdir -p "$HOME/.config/tmux"

@@ -4,7 +4,7 @@ Central storage of dot files for easy pulling and use on other machines.
 ## Resources
 - Great culmination of other resources for [tmux](https://github.com/rothgar/awesome-tmux#plugins)
 - [Packer](https://github.com/wbthomason/packer.nvim) for neovim
-
+- Setting up [gpg](https://gist.github.com/ankurk91/c4f0e23d76ef868b139f3c28bde057fc) for git signing
 
 | Filename | Description |
 | --------------- | --------------- |
