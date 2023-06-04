@@ -13,9 +13,9 @@ split_h 10
 # Run commands.
 #run_cmd "top"     # runs in active pane
 #run_cmd "date" 1  # runs in pane 1
-select_pane 2
+select_pane 1
 run_cmd "cmatrix"
-select_pane 4
+select_pane 3
 run_cmd "cmatrix"
 
 # Paste text
