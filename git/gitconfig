@@ -85,6 +85,7 @@
 	insteadOf = "gist:"
 
 [user]
-	name = Tristan Jahnke
+    email = trjahnke@gmail.com
+    name = Tristan Jahnke
     signingkey = C2A87E5E27C1192142FB4746382AEE5ED97A61C7 
     username = RemoteRabbit
