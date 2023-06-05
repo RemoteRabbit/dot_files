@@ -21,10 +21,6 @@ augroup end
 -- Only required if you have packer configured as `opt`
 vim.cmd.packadd('packer.nvim')
 
-function get_setup(name)
-    return string.format("require('config.%s')", name)
-end
-
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use ('wbthomason/packer.nvim')
@@ -33,10 +29,9 @@ return require('packer').startup(function(use)
 	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} },
-      config = get_setup("telescope")
   })
 
-  use ({ "catppuccin/nvim", as = "catppuccin", config = get_setup("catppuccin") })
+  use ({ "catppuccin/nvim", as = "catppuccin"})
 
   use({
       "folke/trouble.nvim",
@@ -53,20 +48,18 @@ return require('packer').startup(function(use)
             local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
             ts_update()
         end,
-        config = get_setup("treesitter")
     })
 
-  use({"nvim-treesitter/playground", config = get_setup("treesitter-playground")})
-  use({"theprimeagen/harpoon", config = get_setup("harpoon")})
-  use({"mbbill/undotree", config = get_setup("undotree")})
-  use({"tpope/vim-fugitive", config = get_setup("fugitive")})
-  use({"nvim-treesitter/nvim-treesitter-context", config = get_setup("treesitter-context")})
+  use({"nvim-treesitter/playground"})
+  use({"theprimeagen/harpoon"})
+  use({"mbbill/undotree"})
+  use({"tpope/vim-fugitive"})
+  use({"nvim-treesitter/nvim-treesitter-context"})
 
   -- LSP ------------------------------------------------------------------
   use({
       'VonHeikemen/lsp-zero.nvim',
       branch = 'v2.x',
-      config = get_setup("lsp"),
       requires = {
           -- LSP Support
           {'neovim/nvim-lspconfig'},             -- Required
@@ -92,15 +85,8 @@ return require('packer').startup(function(use)
   -----------------------------------------------------------------------------
   use({'rcarriga/nvim-notify'})
 
-  use({"github/copilot.vim", config = get_setup("copilot")})
+  use({"github/copilot.vim"})
 
-  use {
-      "startup-nvim/startup.nvim",
-      requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
-      config = function()
-          require"startup".setup({theme = 'evil'})
-      end
-  }
   -- Put this at the end after all plugins
   if packer_bootstrap then
     require('packer').sync()
