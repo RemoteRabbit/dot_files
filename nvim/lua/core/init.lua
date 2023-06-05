@@ -1,9 +1,9 @@
-require("RemoteRabbit.mappings")
-require("RemoteRabbit.options")
-require("RemoteRabbit.plugins")
+require("core.mappings")
+require("core.options")
+require("core.plugins")
 
 local augroup = vim.api.nvim_create_augroup
-local RemoteRabbitGroup = augroup('RemoteRabbit', {})
+local CoreGroup = augroup('core', {})
 
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
@@ -24,7 +24,7 @@ autocmd('TextYankPost', {
 })
 
 autocmd({"BufWritePre"}, {
-    group = RemoteRabbitGroup,
+    group = CoreGroup,
     pattern = "*",
     command = [[%s/\s\+$//e]],
 })
