@@ -12,7 +12,6 @@ require("mason-lspconfig").setup{
     ensure_installed = {
         "bashls",
         "lua_ls",
-        "lua_lsp",
         "terraformls",
         "tflint",
     }
