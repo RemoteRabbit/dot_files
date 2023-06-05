@@ -1,6 +1,3 @@
-[![Neovim](https://wakatime.com/static/img/Neovim-supported-brightgreen.svg)](https://github.com/wakatime/vim-wakatime#installation)
-[![Coding time tracker](https://wakatime.com/badge/github/wakatime/vim-wakatime.svg)](https://wakatime.com/badge/github/RemoteRabbit/dot_files)
-
 # nvim-setup
 Files for my NeoVim setup
 
