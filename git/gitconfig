@@ -5,6 +5,7 @@
 	alias=!git config -l | grep ^alias | cut -c 7- | sort
     c = clone --recursive
     ca = !git add -A && git commit -av
+    cam = !git add -A && git commit -av -m
     # Remove branches that have already been merged with master
 	# a.k.a. ‘delete merged’
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d; git remote -v update -p"
