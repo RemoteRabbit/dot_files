@@ -38,6 +38,17 @@ return require('packer').startup(function(use)
   -- Theme
   use({ "catppuccin/nvim", as = "catppuccin" })
 
+  -- Lua
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+      require("which-key").setup {
+      }
+    end
+  }
+
   use({
     "folke/zen-mode.nvim",
     config = function()

@@ -54,6 +54,7 @@ alias python="python3"
 alias vim="nvim"
 alias tmf="tmuxifier"
 alias tmfl="tmuxifier load-session "
+alias rm="trash -v"
 
 #source <(kubectl completion zsh)
 
