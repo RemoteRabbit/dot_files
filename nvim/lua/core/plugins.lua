@@ -27,6 +27,7 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use('wbthomason/packer.nvim')
 
+  -- Fuzzy finder
   use({
     'nvim-telescope/telescope.nvim',
     tag = '0.1.0',
@@ -34,7 +35,23 @@ return require('packer').startup(function(use)
     requires = { { 'nvim-lua/plenary.nvim' } },
   })
 
+  -- Theme
   use({ "catppuccin/nvim", as = "catppuccin" })
+
+  use({
+    "folke/zen-mode.nvim",
+    config = function()
+      require("zen-mode").setup {}
+    end,
+  })
+
+  use({
+    "Pocco81/auto-save.nvim",
+    config = function()
+      require("auto-save").setup {
+      }
+    end,
+  })
 
   use({
     "folke/trouble.nvim",
