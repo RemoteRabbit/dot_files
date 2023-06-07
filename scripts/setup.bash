@@ -7,6 +7,9 @@ if [[ '$OSTYPE' == 'linux-gnu' ]]; then
     sudo apt-get install build-essential
 fi
 
+# Kitty
+ln -s -f $HOME/dot_files/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
+
 # Git setup
 ln -s -f $HOME/dot_files/git/gitconfig $HOME/.gitconfig
 

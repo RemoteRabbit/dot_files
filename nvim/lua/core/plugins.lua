@@ -50,6 +50,25 @@ return require('packer').startup(function(use)
   }
 
   use({
+    "nvim-tree/nvim-tree.lua",
+    config = function()
+      require("nvim-tree").setup {}
+    end
+  })
+
+  use({
+    'nvim-tree/nvim-web-devicons',
+  })
+
+  use({
+    'nvim-lualine/lualine.nvim',
+    config = function()
+      require("lualine").setup {}
+    end
+  })
+
+
+  use({
     "folke/zen-mode.nvim",
     config = function()
       require("zen-mode").setup {}
