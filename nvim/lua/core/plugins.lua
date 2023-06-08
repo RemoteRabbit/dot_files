@@ -58,9 +58,15 @@ return require('packer').startup(function(use)
   })
 
   -- Theme
-  use({ "catppuccin/nvim", as = "catppuccin" })
+  use({
+    "catppuccin/nvim",
+    as = "catppuccin",
+    config = function()
+      require("catppuccin").setup {}
+    end,
+  })
 
-  -- Lua
+  -- Which-Key
   use {
     "folke/which-key.nvim",
     config = function()
@@ -171,4 +177,10 @@ return require('packer').startup(function(use)
   if packer_bootstrap then
     require('packer').sync()
   end
+
+  config = {
+    display = {
+      open_fn = require('packer.util').float,
+    }
+  }
 end)
