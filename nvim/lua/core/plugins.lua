@@ -27,6 +27,19 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use('wbthomason/packer.nvim')
 
+  -- install without yarn or npm
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = "cd app && npm install",
+    config = function()
+      require("markdown-preview").setup {}
+    end,
+    setup = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown" },
+  })
+
   -- Fuzzy finder
   use({
     'nvim-telescope/telescope.nvim',
