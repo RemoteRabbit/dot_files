@@ -27,6 +27,15 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use('wbthomason/packer.nvim')
 
+  -- Startup
+  use({
+    "startup-nvim/startup.nvim",
+    requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+    config = function()
+      require("startup").setup({ theme = "startify" })
+    end
+  })
+
   -- install without yarn or npm
   use({
     "iamcco/markdown-preview.nvim",
