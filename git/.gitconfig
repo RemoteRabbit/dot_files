@@ -16,6 +16,9 @@
     p = !"git pull; git submodule foreach git pull origin master"
 
     # Show verbose output about tags, branches or remotes
+	#
+	#[user]
+	#username =
 	tags = tag -l
 	branches = branch -a
 	remotes = remote -v
@@ -86,7 +89,10 @@
 	insteadOf = "gist:"
 
 [user]
-    email = trjahnke@gmail.com
+	email = trjahnke@gmail.com
     name = Tristan Jahnke
     signingkey = F469DB7891E0CC5DB93FB98CE703C15524552154
-    username = RemoteRabbit
+	username = RemoteRabbit
+
+[includeIf "gitdir:~/work/wendys/**"]
+	path = ~/dot_files/git/wendys.gitconfig

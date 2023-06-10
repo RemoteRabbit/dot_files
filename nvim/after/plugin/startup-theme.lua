@@ -1,5 +1,5 @@
 vim.g.startup_bookmarks = {
   ["Q"] = '$HOME/dot_files',
-  ["I"] = '$HOME/wendys',
+  ["W"] = '$HOME/work/wendys',
   ["F"] = '$HOME/personal',
 }

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+DOTS=$HOME/dot_files
+
 if [[ '$OSTYPE' == 'linux-gnu' ]]; then
     if [ ! dpkg -s zsh ]; then
         sudo apt-get install zsh
@@ -11,7 +13,7 @@ fi
 ln -s -f $HOME/dot_files/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
 
 # Git setup
-ln -s -f $HOME/dot_files/git/gitconfig $HOME/.gitconfig
+ln -s -f $HOME/dot_files/git/.gitconfig $HOME/.gitconfig
 
 # Tmux setup
 mkdir -p "$HOME/.config/tmux"
