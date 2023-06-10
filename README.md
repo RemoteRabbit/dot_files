@@ -9,6 +9,22 @@ Central storage of dot files for easy pulling and use on other machines.
 - Setting up [gpg](https://gist.github.com/ankurk91/c4f0e23d76ef868b139f3c28bde057fc) for git signing
 - Like the Tmux resource but for [neovim](https://github.com/rockerBOO/awesome-neovim)
 
-| Filename | Description |
-| --------------- | --------------- |
-| [.zshrc](.zshrc) | Base rc file with core oh-my-zsh with theme(s) and plugins along with all imports. |
+# Software
+
+| Category | Name | Docs/Site |
+| -------- | ---- | --------- |
+| Terminal | kitty |  |
+| Font | 3720 Nerd Font |  |
+| Colors | catppuccin |  |
+| Shell | zsh |  |
+| Multiplexer | nothing atm |  |
+| Editor | Neovim |  |
+| Git | base git |  |
+
+# Hardware
+
+| Category | What | Link |
+| -------- | ---- | ---- |
+| Keyboard | Kenisis Advatage Pro 360 |  |
+| Mouse | Logitech Mx Master 3 | |
+

@@ -43,10 +43,6 @@ return require('packer').startup(function(use)
     config = function()
       require("markdown-preview").setup {}
     end,
-    setup = function()
-      vim.g.mkdp_filetypes = { "markdown" }
-    end,
-    ft = { "markdown" },
   })
 
   -- Fuzzy finder
