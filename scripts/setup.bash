@@ -28,17 +28,26 @@ ln -s -f "$HOME/dot_files/nvim" "$HOME/.config/nvim"
 
 # Zsh setup
 [ ! -d "$HOME/.oh-my-zsh" ] && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-[ -d "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/" ] && git -C "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" pull || git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-[ -d "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ] && git -C "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions" pull || git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-[ -d "$HOME/.oh-my-zsh/custom/themes/powerlevel10k" ] && git -C "$HOME/.oh-my-zsh/custom/themes/powerlevel10k" pull || git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/custom/themes/powerlevel10k
-ln -s -f "$HOME/dot_files/zsh/zshrc" "$HOME/.zshrc"
-ln -s -f "$HOME/dot_files/zsh/p10k.zsh" "$HOME/.p10k.zsh"
+ln -s -f "$HOME/dot_files/.config/.zshrc" "$HOME/.zshrc"
 
 # Homebrew setup
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # source $HOME/.zshrc
 
-brew bundle install --file "$HOME/dot_files/homebrew/Brewfile"
+echo -e "\n\ninstalling to $HOME/.config"
+echo "=============================="
+if [ ! -d "$HOME/.config" ]; then
+    echo "Creating $HOME/.config"
+    mkdir -p "$HOME/.config"
+fi
 
-tmux source-file "$HOME/.config/tmux/tmux.conf"
+for config in $DOTFILES/config/*; do
+    target=$HOME/.config/$( basename $config )
+    if [ -e $target ]; then
+        echo "~${target#$HOME} already exists... Skipping."
+    else
+        echo "Creating symlink for $config"
+        ln -s $config $target
+    fi
+done
