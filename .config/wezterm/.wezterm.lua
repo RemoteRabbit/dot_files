@@ -12,5 +12,5 @@ return {
 	scrollback_lines = 5000,
 	hide_tab_bar_if_only_one_tab = true,
 
-	window_background_opacity = 0.8,
+	window_background_opacity = 0.7,
 }
