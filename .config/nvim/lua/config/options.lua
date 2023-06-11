@@ -1,5 +1,8 @@
 vim.opt.guicursor = ""
 
+-- Top bar layout
+vim.opt.winbar = "%=%m %f"
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
