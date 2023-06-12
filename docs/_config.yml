@@ -25,11 +25,11 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "dot_files/" # the subpath of your site, e.g. /blog
 url: "https://remoterabbit.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  RemoteRabbit
+aux_links: # remove if you don't want this link to appear on your pages
+  Template Repository: https://github.com/remoterabbit/dot_files
 
 # Build settings
 theme: just-the-docs
-plugins:
-  - jekyll-feed
 
 markdown: kramdown
 # Exclude from processing.
