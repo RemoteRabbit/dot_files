@@ -10,3 +10,5 @@ All sbmodules should automatically be updated and pulled when running the `git p
 
 ## PLugins
 - [zsh-vi-mode](https://github.com/jeffreytse/zsh-vi-mode)
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
