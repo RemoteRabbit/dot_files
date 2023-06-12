@@ -1,18 +1,65 @@
 site_name: RemoteRabbit dot/config files docs
 site_url: https://remoterabbit.github.io/dot_files
+repo_url: https://github.com/RemoteRabbit/dot_files
 site_author: RemoteRabbit
+docs_dir: docs
+edit_uri: edit/main/docs
 site_description: A site to host some documenation on why and how I use my dot/config files
-theme:
-  name: terminal
-  palette: dark
-  features:
-    - navigation.side.indexes
+markdown_extensions:
+  # Python Markdown  
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - meta
+  - toc:
+      permalink: true
+
+  # PyMdown Extensions
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.snippets:
+      base_path: 
+        - docs
 
 nav:
-  - Home: index.md
-  - .config:
-      - Index: 'config/index.md'
-      - Neovim:
-        - Index: 'config/neovim/index.md'
-        - Config: 'config/neovim/config.md'
-        - plugins: 'config/neovim/plugins.md'
+    - Home: 'index.md'
+    - Configuration:
+      - Index: 'index.md'
+      - Color Palettes: 
+        - Index: 'nvim/index.md'
+        - Default: 'nvim/nvim-config.md'
+
+plugins:
+  - md-to-html
+  - git-revision-date
+  - search
+  - exclude-search:      
+      exclude:
+        - overrides
+        - about/coverage-report/*
+        - configuration/palettes/*
+        - elements/examples/*
+      ignore:
+        - configuration/palettes/index.md#theme-color-palettes
+        - configuration/palettes/dark.md#dark-palette
+        - configuration/palettes/default.md#default-palette
+        - configuration/palettes/gruvbox-dark.md#gruvbox-dark-palette
+        - configuration/palettes/pink.md#pink-palette
+        - configuration/palettes/sans-dark.md#sans-dark-palette
+        - configuration/palettes/sans.md#sans-palette
+  - macros:
+      modules: 
+        - mkdocs-terminal:terminal.pluglets.tile_grid.main
+
+## deploy settings
+theme:
+  name: terminal
+  custom_dir: theme_overrides
+  features:
+    - footer.prev_next
+    - navigation.side.indexes
+    - revision.date
+    - revision.history
+
