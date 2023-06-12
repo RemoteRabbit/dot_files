@@ -39,6 +39,23 @@ alias tmf="tmuxifier"
 alias tmfl="tmuxifier load-session "
 alias rm="trash -v"
 
+# Pomodoro timer from (https://gist.github.com/bashbunni/3880e4194e3f800c4c494de286ebc1d7)
+declare -A pomo_options
+pomo_options["work"]="45"
+pomo_options["break"]="10"
+
+pomodoro () {
+  if [ -n "$1" -a -n "${pomo_options["$1"]}" ]; then
+  val=$1
+  echo $val | lolcat
+  timer ${pomo_options["$val"]}m
+  spd-say "'$val' session done"
+  fi
+}
+
+alias wo="pomodoro 'work'"
+alias br="pomodoro 'break'"
+
 #source <(kubectl completion zsh)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
