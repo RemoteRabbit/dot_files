@@ -1,14 +1,5 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-#DEFAULT_USER=$USER
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="powerlevel10k/powerlevel10k"
+# Add vim bindings to shell
+source $HOME/dot_files/.config/zsh/shell-plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # Uncomment the following line to automatically update without prompting.
 DISABLE_UPDATE_PROMPT="true"
@@ -28,8 +19,6 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git colored-man-pages zsh-syntax-highlighting zsh-autosuggestions git git-prompt virtualenv colorize)
-
-source $ZSH/oh-my-zsh.sh
 
 export EDITOR='nvim'
 
