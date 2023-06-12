@@ -1,0 +1,10 @@
+site_name: RemoteRabbit dot/config files docs
+site_url: https://remoterabbit.github.io/dot_files
+site_author: RemoteRabbit
+site_description: A site to host some documenation on why and how I use my dot/config files
+theme:
+  name: terminal
+  palette: dark
+
+nav:
+  - About: index.md

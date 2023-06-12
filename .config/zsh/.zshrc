@@ -51,3 +51,6 @@ export PATH="$HOME/.tmuxifier/bin:$PATH"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(starship init zsh)"
+
+# Created by `pipx` on 2023-06-12 02:44:58
+export PATH="$PATH:$HOME/.local/bin"
