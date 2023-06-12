@@ -22,16 +22,14 @@ title: RemoteRabbit Dot/Config File Docs
 email: trjahnke@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Site to hold some documentation around my config files and how to use them.
-baseurl: "dot_files/" # the subpath of your site, e.g. /blog
+baseurl: "/dot_files/" # the subpath of your site, e.g. /blog
 url: "https://remoterabbit.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  RemoteRabbit
 aux_links: # remove if you don't want this link to appear on your pages
   Template Repository: https://github.com/remoterabbit/dot_files
 
 # Build settings
-remote_theme: just-the-docs
-plugins:
-  - jekyll-default-layout
+theme: just-the-docs
 
 markdown: kramdown
 # Exclude from processing.
