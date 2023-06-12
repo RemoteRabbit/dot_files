@@ -27,7 +27,7 @@ url: "https://remoterabbit.github.io" # the base hostname & protocol for your si
 github_username:  RemoteRabbit
 
 # Build settings
-theme: minima
+theme: just-the-docs
 plugins:
   - jekyll-feed
 
