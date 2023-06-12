@@ -29,7 +29,8 @@ aux_links: # remove if you don't want this link to appear on your pages
   Template Repository: https://github.com/remoterabbit/dot_files
 
 # Build settings
-theme: just-the-docs
+#theme: just-the-docs
+remote_theme: "pmarsceill/just-the-docs"
 
 markdown: kramdown
 # Exclude from processing.
