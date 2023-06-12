@@ -15,3 +15,11 @@ build:
     uses: actions/upload-pages-artifact@v1
     with:
       path: "docs/_site/"
+
+on:
+  push:
+    branches:
+      - "main"
+      - "docs"
+    paths:
+      - "docs/**"
