@@ -5,6 +5,14 @@ site_description: A site to host some documenation on why and how I use my dot/c
 theme:
   name: terminal
   palette: dark
+  features:
+    - navigation.side.indexes
 
 nav:
-  - About: index.md
+  - Home: index.md
+  - .config:
+      - Index: 'config/index.md'
+      - Neovim:
+        - Index: 'config/neovim/index.md'
+        - Config: 'config/neovim/config.md'
+        - plugins: 'config/neovim/plugins.md'
