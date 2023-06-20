@@ -77,5 +77,4 @@ export PATH="$PATH:/Users/tristanjahnke/.local/bin"
 export PATH="$PATH:/Users/tristanjahnke/tmux-spotify-info"
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(starship init zsh)"
