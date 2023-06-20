@@ -1,4 +1,4 @@
 nvim/plugin/packer_compiled.lua
 homebrew/Brewfile.lock.json
 
-.config/variety/Downloaded
+~/dot_files/.config/variety/Downloaded/*

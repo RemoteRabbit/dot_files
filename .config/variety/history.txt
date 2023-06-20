@@ -1,4 +1,6 @@
 0
+/home/remoterabbit/.config/variety/Downloaded/nasa_apod/noirlab2307a2048c.jpg
+/home/remoterabbit/.config/variety/Downloaded/Unsplash/photo-1684514570867-39e5f12f03ce.jpg
 /home/remoterabbit/.config/variety/Downloaded/Unsplash/photo-1684535780920-10aea6d3c02e.jpg
 /home/remoterabbit/.config/variety/Downloaded/nasa_apod/Quintet_JwstHstEtcGendler_2413.jpg
 /home/remoterabbit/.config/variety/Downloaded/Earth View/Alert, Canada (ID-1939).jpg
