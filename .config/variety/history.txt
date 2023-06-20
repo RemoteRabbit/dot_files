@@ -1,0 +1,5 @@
+0
+/home/remoterabbit/.config/variety/Downloaded/Earth View/Alert, Canada (ID-1939).jpg
+/home/remoterabbit/.config/variety/Downloaded/Unsplash/photo-1686349472661-ff361a66834b.jpg
+/home/remoterabbit/.config/variety/Downloaded/nasa_apod/PolarisIfn_Zayaz_4000.jpg
+/usr/share/backgrounds/gnome/blobs-l.svg
