@@ -78,3 +78,5 @@ export PATH="$PATH:/Users/tristanjahnke/tmux-spotify-info"
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 
 eval "$(starship init zsh)"
+
+neofetch
