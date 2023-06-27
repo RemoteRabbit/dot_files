@@ -15,9 +15,12 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
--- Custom Adds
+
+-- awesome widgets imports
 local logout_popup = require("awesome-wm-widgets.logout-popup-widget.logout-popup")
 
+-- Spotify
+local spotify_widget = require("awesome-wm-widgets.spotify-widget.spotify")
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -49,20 +52,14 @@ do
 end
 -- }}}
 
--- {{{ Variable definitions
--- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+-- Theme imports
+beautiful.init("~/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "xterm"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
--- Default modkey.
--- Usually, Mod4 is the key with a logo between Control and Alt.
--- If you do not like this or do not have such a key,
--- I suggest you to remap Mod4 to another key using xmodmap or other tools.
--- However, you can use another modifier like Mod1, but it may interact with others.
 modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
@@ -80,9 +77,9 @@ awful.layout.layouts = {
 	awful.layout.suit.max.fullscreen,
 	awful.layout.suit.magnifier,
 	awful.layout.suit.corner.nw,
-	-- awful.layout.suit.corner.ne,
-	-- awful.layout.suit.corner.sw,
-	-- awful.layout.suit.corner.se,
+	awful.layout.suit.corner.ne,
+	awful.layout.suit.corner.sw,
+	awful.layout.suit.corner.se,
 }
 -- }}}
 
@@ -124,7 +121,7 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+mytextclock = wibox.widget.textclock("%B %e, %Y | %I:%M %p")
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -230,18 +227,30 @@ awful.screen.connect_for_each_screen(function(s)
 	-- Add widgets to the wibox
 	s.mywibox:setup({
 		layout = wibox.layout.align.horizontal,
+		expand = "none",
 		{ -- Left widgets
 			layout = wibox.layout.fixed.horizontal,
 			mylauncher,
 			s.mytaglist,
 			s.mypromptbox,
+			s.mytasklist,
 		},
-		s.mytasklist, -- Middle widget
-		{ -- Right widgets
+		{
 			layout = wibox.layout.fixed.horizontal,
-			mykeyboardlayout,
-			wibox.widget.systray(),
+			spotify_widget({
+				dim_when_paused = true,
+				dim_opacity = 0.5,
+				font = "Jetbrains Mono 9",
+				max_length = -1,
+				play_icon = "/usr/share/icons/Papirus-Dark/24x24/categories/spotify.svg",
+				pause_icon = "/usr/share/icons/Papirus-Dark/24x24/panel/spotify-indicator.svg",
+				show_tooltip = false,
+			}),
+		},
+		{ -- Right widgets
 			mytextclock,
+			layout = wibox.layout.fixed.horizontal,
+			wibox.widget.systray(),
 			s.mylayoutbox,
 			logout_popup.widget({}),
 		},
@@ -265,9 +274,10 @@ globalkeys = gears.table.join(
 	awful.key({ modkey }, "Left", awful.tag.viewprev, { description = "view previous", group = "tag" }),
 	awful.key({ modkey }, "Right", awful.tag.viewnext, { description = "view next", group = "tag" }),
 	awful.key({ modkey }, "Escape", awful.tag.history.restore, { description = "go back", group = "tag" }),
+
 	awful.key({ modkey, "Shift" }, "Escape", function()
 		logout_popup.launch()
-	end, { description = "Show logout screen popup", group = "custom" }),
+	end, { description = "Show logout popup", group = "awesome" }),
 
 	awful.key({ modkey }, "j", function()
 		awful.client.focus.byidx(1)
@@ -518,6 +528,18 @@ awful.rules.rules = {
 	-- Add titlebars to normal clients and dialogs
 	{ rule_any = { type = { "normal", "dialog" } }, properties = { titlebars_enabled = true } },
 
+	{
+		rule_any = {
+			class = { "Steam" },
+		},
+		properties = {
+			titlebars_enabled = false,
+			floating = true,
+			border_width = 0,
+			border_color = 0,
+			size_hints_honor = false,
+		},
+	},
 	-- Set Firefox to always map on the tag named "2" on screen 1.
 	-- { rule = { class = "Firefox" },
 	--   properties = { screen = 1, tag = "2" } },
@@ -577,15 +599,4 @@ client.connect_signal("request::titlebars", function(c)
 	})
 end)
 
--- Enable sloppy focus, so that focus follows mouse.
-client.connect_signal("mouse::enter", function(c)
-	c:emit_signal("request::activate", "mouse_enter", { raise = false })
-end)
-
-client.connect_signal("focus", function(c)
-	c.border_color = beautiful.border_focus
-end)
-client.connect_signal("unfocus", function(c)
-	c.border_color = beautiful.border_normal
-end)
--- }}}
+beautiful.useless_gap = 10

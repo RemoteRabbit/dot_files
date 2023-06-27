@@ -74,7 +74,6 @@ alias br="pomodoro 'break'"
 
 # Created by `pipx` on 2022-11-11 18:42:38
 export PATH="$PATH:/Users/tristanjahnke/.local/bin"
-export PATH="$PATH:/Users/tristanjahnke/tmux-spotify-info"
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 
 eval "$(starship init zsh)"
