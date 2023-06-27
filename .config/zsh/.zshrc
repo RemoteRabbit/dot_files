@@ -77,3 +77,5 @@ export PATH="$PATH:/Users/tristanjahnke/.local/bin"
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 
 eval "$(starship init zsh)"
+
+neofetch

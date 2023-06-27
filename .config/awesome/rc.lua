@@ -1,5 +1,3 @@
--- If LuaRocks is installed, make sure that packages installed through it are
--- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
 
 -- Standard awesome library
@@ -23,7 +21,6 @@ local logout_popup = require("awesome-wm-widgets.logout-popup-widget.logout-popu
 
 -- Spotify
 local spotify_widget = require("awesome-wm-widgets.spotify-widget.spotify")
-
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -57,6 +54,7 @@ end
 
 -- Theme imports
 beautiful.init("~/.config/awesome/theme.lua")
+
 -- This is used later as the default terminal and editor to run.
 terminal = "xterm"
 editor = os.getenv("EDITOR") or "nano"
