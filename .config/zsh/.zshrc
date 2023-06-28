@@ -49,6 +49,7 @@ alias vim="nvim"
 alias tmf="tmuxifier"
 alias tmfl="tmuxifier load-session "
 alias rm="trash -v"
+alias cat="bat"
 
 # Pomodoro timer from (https://gist.github.com/bashbunni/3880e4194e3f800c4c494de286ebc1d7)
 declare -A pomo_options
