@@ -12,6 +12,7 @@ Central storage of dot files for easy pulling and use on other machines.
 ## Arch Depends
 - bluez
 - bluez-utils
+- rofi
 
 # Software
 

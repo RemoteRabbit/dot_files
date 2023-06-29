@@ -2,7 +2,8 @@ set $mod Mod4
 include $HOME/.config/i3/*.conf
 include $HOME/.config/i3/keybindings/*.conf
 
-font pango:FiraCode Nerd Font 10
+# font pango:FiraCode Nerd Font 10
+font pango:JetBrainsMono Nerd Font 10
 
 # Remove title bars from normal windows. ! for all windows
 default_border pixel 1
@@ -23,7 +24,7 @@ floating_modifier $mod
 bindsym $mod+Return exec wezterm
 
 # kill focused window
-bindsym $mod++q kill
+bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
@@ -133,5 +134,5 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+u mode "resize"
 
