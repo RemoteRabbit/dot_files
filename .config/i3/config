@@ -1,9 +1,9 @@
 set $mod Mod4
 include $HOME/.config/i3/*.conf
-#include $HOME/.config/i3/keybindings/*.conf
+include $HOME/.config/i3/keybindings/*.conf
 
 # font pango:FiraCode Nerd Font 10
-font pango:JetBrainsMono Nerd Font 10
+font pango:JetBrainsMono Nerd Font 12
 
 # Remove title bars from normal windows. ! for all windows
 default_border pixel 1

@@ -1,0 +1,9 @@
+[submodule ".config/zsh/shell-plugins/zsh-vi-mode"]
+	path = .config/zsh/shell-plugins/zsh-vi-mode
+	url = https://github.com/jeffreytse/zsh-vi-mode.git
+[submodule ".config/zsh/shell-plugins/zsh-autosuggestions"]
+	path = .config/zsh/shell-plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule ".config/zsh/shell-plugins/zsh-syntax-highlighting"]
+	path = .config/zsh/shell-plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
