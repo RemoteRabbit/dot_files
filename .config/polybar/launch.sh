@@ -1,12 +1,15 @@
 #!/bin/bash
 
-# Terminate already running bar instances
 killall -q polybar
-# If all your bars have ipc enabled, you can also use
-# polybar-msg cmd quit
 
-# Launch Polybar, using default config location ~/.config/polybar/config.ini
-polybar mybar 2>&1 | tee -a /tmp/polybar.log &
-disown
+MONITOR=DisplayPort-0 polybar --reload left-bar &
+MONITOR=DisplayPort-1 polybar --reload center-bar &
+MONITOR=DisplayPort-2 polybar --reload right-bar &
 
-echo "Polybar launched..."
+# Loop to repeat on all monitors
+# 	for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+# 		MONITOR=$m polybar --reload bar &
+# 	done
+# else
+# 	polybar --reload bar &
+# fi

@@ -9,6 +9,11 @@ Central storage of dot files for easy pulling and use on other machines.
 - Setting up [gpg](https://gist.github.com/ankurk91/c4f0e23d76ef868b139f3c28bde057fc) for git signing
 - Like the Tmux resource but for [neovim](https://github.com/rockerBOO/awesome-neovim)
 
+## Arch Depends
+- bluez
+- bluez-utils
+- rofi
+
 # Software
 
 | Category | Name | Docs/Site |

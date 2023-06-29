@@ -2,7 +2,7 @@
 
 dirs() {
 	for f in $(find "$HOME"/dot_files/.config/* -maxdepth 0); do
-		if [[ $f != "zsh" ]]; then
+		if [[ $f != $HOME/dot_files/.config/zsh ]]; then
 			link "$f"
 		else
 			files "$f"
