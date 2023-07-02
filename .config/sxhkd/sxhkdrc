@@ -1,2 +1,2 @@
-super + {d,r,p,s}
-	sh $HOME/.config/rofi/bin/{launcher,runner,powermenu,screenshot}
+super + {d,r,p}
+	sh $HOME/.config/rofi/bin/{launcher,runner,powermenu}
