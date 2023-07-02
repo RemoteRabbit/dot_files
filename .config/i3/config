@@ -24,6 +24,16 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+mode "rofi" {
+        bindsym Escape mode "default"
+        bindsym Return mode "default"
+        bindsym $mod+d mode "default"
+        bindsym l exec --no-startup-id $HOME/dot_files/.config/rofi/bin/launcher
+        bindsym r exec --no-startup-id $HOME/dot_files/.config/rofi/bin/runner
+        bindsym p exec --no-startup-id $HOME/dot_files/.config/rofi/bin/powermenu
+}
+bindsym $mod+d mode "rofi"
+
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec alacritty

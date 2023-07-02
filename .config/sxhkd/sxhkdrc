@@ -1,2 +1,0 @@
-super + {d,r,p}
-	sh $HOME/.config/rofi/bin/{launcher,runner,powermenu}
