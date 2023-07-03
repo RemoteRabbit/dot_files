@@ -50,10 +50,7 @@ args = parser.parse_args()
 
 def fix_string(string):
     # corrects encoding for the python version used
-    if sys.version_info.major == 3:
-        return string
-    else:
-        return string.encode('utf-8')
+    return string if sys.version_info.major == 3 else string.encode('utf-8')
 
 
 def truncate(name, trunclen):
@@ -68,7 +65,6 @@ def truncate(name, trunclen):
 
 # Default parameters
 output = fix_string(u'{play_pause} {artist}: {song}')
-trunclen = 35
 play_pause = fix_string(u'\u25B6,\u23F8') # first character is play, second is paused
 
 label_with_font = '%{{T{font}}}{label}%{{T-}}'
@@ -77,9 +73,7 @@ play_pause_font = args.play_pause_font
 
 quiet = args.quiet
 
-# parameters can be overwritten by args
-if args.trunclen is not None:
-    trunclen = args.trunclen
+trunclen = args.trunclen if args.trunclen is not None else 35
 if args.custom_format is not None:
     output = args.custom_format
 if args.play_pause is not None:
