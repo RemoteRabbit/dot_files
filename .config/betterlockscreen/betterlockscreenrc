@@ -1,5 +1,3 @@
-# ~/.config/betterlockscreenrc
-
 # default options
 display_on=0
 span_image=false

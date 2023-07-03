@@ -12,23 +12,19 @@ ENABLE_CORRECTION="true"
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-export EDITOR='nvim'
-
 alias vim="nvim"
-alias tmf="tmuxifier"
-alias tmfl="tmuxifier load-session "
 alias rm="trash -v"
 alias cat="bat"
+alias so="source $ZDOTDIR/.zshrc"
 
 eval "$(starship init zsh)"
 
-# Add vim bindings to shell
-source $HOME/dot_files/zsh/shell-plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-
 # Plugin for auto suggestions
-source $HOME/dot_files/zsh/shell-plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+source $ZDOTDIR/shell-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Add vim bindings to shell
+source $ZDOTDIR/shell-plugins/zsh-vi-mode/zsh-vi-mode.zsh
 
 # Plugin for syntax highlighting
-source $HOME/dot_files/zsh/shell-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+source $ZDOTDIR/shell-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 neofetch
