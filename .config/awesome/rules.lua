@@ -52,6 +52,8 @@ awful.rules.rules = {
 		properties = { floating = true },
 	},
 
+	{ rule = { class = "discord" }, properties = { screen = 3, tag = "9" } },
+
 	-- Add titlebars to normal clients and dialogs
 	{
 		rule_any = {

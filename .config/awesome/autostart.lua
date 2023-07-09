@@ -1,9 +1,14 @@
-autorun = true
+local awful = require("awful")
 
-autorunApps = {}
+local autorun = true
+
+local autorunScripts = {
+	"xrandr --output DisplayPort-1 --primary",
+	"feh --bg-fill $HOME/dot_files/wallpapers/tux-linux-color.jpg",
+}
 
 if autorun then
-	for app = 1, #autorunApps do
-		awful.util.spawn(autorunApps[app])
+	for script = 1, #autorunScripts do
+		awful.spawn.with_shell(autorunScripts[script])
 	end
 end
