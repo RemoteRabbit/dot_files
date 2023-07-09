@@ -16,6 +16,7 @@ alias vim="nvim"
 alias rm="trash -v"
 alias cat="bat"
 alias so="source $ZDOTDIR/.zshrc"
+alias fedi="neonmodem"
 
 eval "$(starship init zsh)"
 

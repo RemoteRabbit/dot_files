@@ -48,7 +48,7 @@ case $chosen in
 $shutdown)
 	ans=$(rdialog &)
 	if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
-		systemctl poweroff
+		poweroff
 	elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
 		exit
 	else
@@ -58,7 +58,7 @@ $shutdown)
 $reboot)
 	ans=$(rdialog &)
 	if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
-		systemctl reboot
+		reboot
 	elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
 		exit
 	else
