@@ -20,6 +20,11 @@ require("awful.hotkeys_popup.keys")
 
 require("autostart")
 
+-- awesome-wm-widgets
+local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
+local ram_widget = require("awesome-wm-widgets.ram-widget.ram-widget")
+local spotify_widget = require("awesome-wm-widgets.spotify-widget.spotify")
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -61,16 +66,10 @@ terminal = "alacritty"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
--- Default modkey.
--- Usually, Mod4 is the key with a logo between Control and Alt.
--- If you do not like this or do not have such a key,
--- I suggest you to remap Mod4 to another key using xmodmap or other tools.
--- However, you can use another modifier like Mod1, but it may interact with others.
 modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
-	-- awful.layout.suit.floating,
 	awful.layout.suit.tile,
 	awful.layout.suit.tile.left,
 	awful.layout.suit.tile.bottom,
@@ -82,10 +81,6 @@ awful.layout.layouts = {
 	awful.layout.suit.max,
 	awful.layout.suit.max.fullscreen,
 	awful.layout.suit.magnifier,
-	awful.layout.suit.corner.nw,
-	-- awful.layout.suit.corner.ne,
-	-- awful.layout.suit.corner.sw,
-	-- awful.layout.suit.corner.se,
 }
 -- }}}
 
@@ -116,18 +111,13 @@ mymainmenu = awful.menu({
 	},
 })
 
-mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon, menu = mymainmenu })
-
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- }}}
 
--- Keyboard map indicator and switcher
-mykeyboardlayout = awful.widget.keyboardlayout()
-
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock("%b %d, %Y - %I:%M %p")
+dateClock = wibox.widget.textclock("%b %d, %Y - %I:%M %p")
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -240,13 +230,41 @@ awful.screen.connect_for_each_screen(function(s)
 		expand = "none",
 		{ -- Left widgets
 			layout = wibox.layout.fixed.horizontal,
-			mylauncher,
+			-- mylauncher,
 			s.mytaglist,
 			s.mypromptbox,
-			s.mytasklist, -- Middle widget
+			s.mytasklist,
 		},
-		mytextclock,
+		{ -- Middle widget
+			align = "center",
+			halign = "center",
+			layout = wibox.layout.align.horizontal,
+			ram_widget({
+				height = 100,
+				width = 100,
+			}),
+			dateClock,
+			cpu_widget({
+				width = 70,
+				step_width = 2,
+				step_spacing = 0,
+				color = "#434c5e",
+			}),
+		},
 		{ -- Right widgets
+			spotify_widget({
+				font = "JetBrainsMono Nerd Font 20",
+				play_icon = "/usr/share/icons/Papirus/16x16/panel/spotify-indicator.svg",
+				pause_icon = "/usr/share/icons/Papirus/16x16/panel/spotify-indicator-paused.svg",
+				max_length = 50,
+				dim_when_paused = true,
+				dim_opacity = 0.5,
+				show_tooltip = true,
+				tooltip_font = "JetBrainsMono Nerd Font 10",
+				followtag = true,
+				widget_text = "${artist} ${title}",
+				sp_bin = gears.filesystem.get_configuration_dir() .. "scripts/sp.sh",
+			}),
 			layout = wibox.layout.fixed.horizontal,
 			wibox.widget.systray(),
 			s.mylayoutbox,
@@ -475,16 +493,3 @@ client.connect_signal("manage", function(c)
 		awful.placement.no_offscreen(c)
 	end
 end)
-
--- -- Enable sloppy focus, so that focus follows mouse.
--- client.connect_signal("mouse::enter", function(c)
--- 	c:emit_signal("request::activate", "mouse_enter", { raise = false })
--- end)
-
-client.connect_signal("focus", function(c)
-	c.border_color = beautiful.border_focus
-end)
-client.connect_signal("unfocus", function(c)
-	c.border_color = beautiful.border_normal
-end)
--- }}}
