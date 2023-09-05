@@ -30,7 +30,8 @@ awful.rules.rules = {
 				"Blueman-manager",
 				"Gpick",
 				"Kruler",
-				"MessageWin", -- kalarm.
+				"MessageWin", -- kalarm
+				"protonvpn",
 				"Sxiv",
 				"Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
 				"Wpa_gui",
@@ -52,7 +53,25 @@ awful.rules.rules = {
 		properties = { floating = true },
 	},
 
-	{ rule = { class = "discord" }, properties = { screen = 3, tag = "9" } },
+	{ rule = { class = "discord" }, properties = { screen = 2, tag = "9" } },
+
+	-- Gaming
+	{
+		rule_any = {
+			class = {
+				"Adventure-capitalist.x86",
+				"Paradox Launcher",
+				"Stardew Valley",
+				"^steam_app",
+			},
+			name = {
+				"LariLauncher",
+				"Stardew Valley",
+			},
+		},
+		properties = { screen = 1, tag = "9" },
+	},
+	{ rule = { class = "Steam" }, properties = { screen = 2, tag = "8" } },
 
 	-- Add titlebars to normal clients and dialogs
 	{

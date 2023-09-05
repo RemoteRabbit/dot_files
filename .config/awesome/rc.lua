@@ -21,8 +21,6 @@ require("awful.hotkeys_popup.keys")
 require("autostart")
 
 -- awesome-wm-widgets
-local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
-local ram_widget = require("awesome-wm-widgets.ram-widget.ram-widget")
 local spotify_widget = require("awesome-wm-widgets.spotify-widget.spotify")
 
 -- {{{ Error handling
@@ -239,17 +237,7 @@ awful.screen.connect_for_each_screen(function(s)
 			align = "center",
 			halign = "center",
 			layout = wibox.layout.align.horizontal,
-			ram_widget({
-				height = 100,
-				width = 100,
-			}),
 			dateClock,
-			cpu_widget({
-				width = 70,
-				step_width = 2,
-				step_spacing = 0,
-				color = "#434c5e",
-			}),
 		},
 		{ -- Right widgets
 			spotify_widget({
@@ -296,9 +284,9 @@ globalkeys = gears.table.join(
 	awful.key({ modkey }, "k", function()
 		awful.client.focus.byidx(-1)
 	end, { description = "focus previous by index", group = "client" }),
-	awful.key({ modkey }, "w", function()
-		mymainmenu:show()
-	end, { description = "show main menu", group = "awesome" }),
+	-- awful.key({ modkey }, "w", function()
+	-- 	mymainmenu:show()
+	-- end, { description = "show main menu", group = "awesome" }),
 
 	-- Layout manipulation
 	awful.key({ modkey, "Shift" }, "j", function()
@@ -327,6 +315,11 @@ globalkeys = gears.table.join(
 	end, { description = "open a terminal", group = "launcher" }),
 	awful.key({ modkey, "Control" }, "r", awesome.restart, { description = "reload awesome", group = "awesome" }),
 	awful.key({ modkey, "Shift" }, "q", awesome.quit, { description = "quit awesome", group = "awesome" }),
+
+	-- Flameshot
+	awful.key({ modkey }, "=", function()
+		awful.spawn.with_shell("flameshot gui")
+	end, { description = "flameshot", group = "edits" }),
 
 	awful.key({ modkey }, "l", function()
 		awful.tag.incmwfact(0.05)
@@ -361,10 +354,19 @@ globalkeys = gears.table.join(
 		end
 	end, { description = "restore minimized", group = "client" }),
 
-	-- Prompt
-	awful.key({ modkey }, "r", function()
-		awful.util.spawn("dmenu_run")
-	end, { description = "dmenu prompt", group = "launcher" }),
+	-- Rofi
+	-- awful.key({ modkey }, "r", function()
+	-- 	awful.util.spawn("dmenu_run")
+	-- end, { description = "dmenu prompt", group = "Rofi" }),
+	awful.key({ modkey }, "d", function()
+		awful.util.spawn("rofi -show drun")
+	end, { description = "rofi drun", group = "Rofi" }),
+	awful.key({ modkey }, "p", function()
+		awful.spawn.with_shell("$HOME/dot_files/.config/rofi/bin/powermenu")
+	end, { description = "rofi", group = "Rofi" }),
+	awful.key({ modkey }, "w", function()
+		awful.util.spawn("rofi -show window")
+	end, { description = "rofi window", group = "Rofi" }),
 
 	awful.key({ modkey }, "x", function()
 		awful.prompt.run({
