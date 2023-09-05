@@ -5,7 +5,6 @@ local autorun = true
 local autorunScripts = {
 	"flameshot",
 	"xrandr --output DisplayPort-1 --primary",
-	"feh --bg-fill $HOME/dot_files/wallpapers/tux-linux-color.jpg",
 }
 
 if autorun then
