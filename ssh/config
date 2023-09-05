@@ -2,6 +2,6 @@ Host github.com
     HostName github.com
     IdentityFile ~/.ssh/personal-github
 
-Host gitlab.wendys.com
-    HostName gitlab.wendys.com
+Host git@gitlab.com
+    HostName git@gitlab.com
     IdentityFile ~/.ssh/wendys
