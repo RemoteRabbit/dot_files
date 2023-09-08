@@ -34,6 +34,7 @@ packages=(
 	"npm"
 	"pavucontrol"
 	"pfetch"
+	"picom"
 	"pipewire"
 	"rofi"
 	"sddm"
