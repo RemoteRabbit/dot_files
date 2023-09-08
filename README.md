@@ -8,6 +8,7 @@ Central storage of dot files for easy pulling and use on other machines.
 - [Packer](https://github.com/wbthomason/packer.nvim) for neovim
 - Setting up [gpg](https://gist.github.com/ankurk91/c4f0e23d76ef868b139f3c28bde057fc) for git signing
 - Like the Tmux resource but for [neovim](https://github.com/rockerBOO/awesome-neovim)
+- Text to [ansi art](https://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow&t=dotfiles)
 
 ## Arch Depends
 - bluez
@@ -18,11 +19,11 @@ Central storage of dot files for easy pulling and use on other machines.
 
 | Category | Name | Docs/Site |
 | -------- | ---- | --------- |
-| Terminal | kitty |  |
+| Terminal | alcritty |  |
 | Font | 3720 Nerd Font |  |
 | Colors | catppuccin |  |
 | Shell | zsh |  |
-| Multiplexer | nothing atm |  |
+| Multiplexer | zellij |  |
 | Editor | Neovim |  |
 | Git | base git |  |
 

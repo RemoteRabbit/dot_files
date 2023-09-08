@@ -28,10 +28,15 @@ packages=(
 	"betterlockscreen"
 	"brave-nightly-bin"
 	"discord"
+	"go"
+	"neofetch"
 	"neovim"
+	"npm"
 	"pavucontrol"
+	"pfetch"
 	"pipewire"
 	"rofi"
+	"sddm"
 	"slack"
 	"spotify"
 	"starship"
@@ -43,7 +48,7 @@ packages=(
 )
 
 for package in "${packages[@]}"; do
-	echo "Checking for $package..."
+	# echo "Checking for $package..."
 	if ! yay -Qs "$package" &>/dev/null; then
 		echo "$package not found, installing..."
 		yay -S "$package" --noconfirm
@@ -51,13 +56,3 @@ for package in "${packages[@]}"; do
 		echo "$package found, skipping..."
 	fi
 done
-
-echo "-----------------------------------------
-██████╗  ██████╗ ███╗   ██╗███████╗██╗██╗
-██╔══██╗██╔═══██╗████╗  ██║██╔════╝██║██║
-██║  ██║██║   ██║██╔██╗ ██║█████╗  ██║██║
-██║  ██║██║   ██║██║╚██╗██║██╔══╝  ╚═╝╚═╝
-██████╔╝╚██████╔╝██║ ╚████║███████╗██╗██╗
-╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═╝╚═╝
------------------------------------------
-"
