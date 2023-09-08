@@ -29,6 +29,7 @@ packages=(
 	"brave-nightly-bin"
 	"discord"
 	"go"
+	"mkinitcpio-firmware"
 	"neofetch"
 	"neovim"
 	"npm"
