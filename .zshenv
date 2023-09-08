@@ -1,1 +1,1 @@
-export ZDOTDIR="$HOME/dot_files/zsh" export EDITOR="nvim"
+ZDOTDIR=$HOME/.config/zsh
