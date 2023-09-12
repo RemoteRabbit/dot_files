@@ -1,0 +1,6 @@
+alias cat="bat"
+alias fedi="neonmodem"
+alias rm="trash -v"
+alias so="source $ZDOTDIR/.zshrc"
+alias vim="nvim"
+alias z="zellij"

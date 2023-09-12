@@ -91,7 +91,7 @@
 [user]
 	email = trjahnke@gmail.com
     name = Tristan Jahnke
-    signingkey = 90B5C467747B7A62D9DEDBB6035F406BD3AC8627
+    signingkey = 6DC4A40C30745553A3A10C9887B5510262571572
     username = RemoteRabbit
 
 [includeIf "gitdir:~/work/wendys/**"]

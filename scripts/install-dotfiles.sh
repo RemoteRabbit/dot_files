@@ -32,8 +32,12 @@ configFolders=(
 )
 
 configFiles=(
-	".zshenv"
 	"starship.toml"
+)
+
+homeFiles=(
+	"git/.gitconfig"
+	".zshenv"
 )
 
 underline "\nLinking config folders!"
@@ -53,5 +57,15 @@ for file in "${configFiles[@]}"; do
 	else
 		echo "$file not found, creating..."
 		ln -s "$HOME/dot_files/$file" "$HOME/.config"
+	fi
+done
+
+underline "\nLinking home files!"
+for file in "${homeFiles[@]}"; do
+	if [ -f "$HOME/$file" ]; then
+		echo "$file found, skipping..."
+	else
+		echo "$file not found, creating..."
+		ln -s "$HOME/dot_files/$file" "$HOME"
 	fi
 done
