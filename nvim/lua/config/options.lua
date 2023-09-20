@@ -32,3 +32,6 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "0"
+
+-- cursor line
+vim.opt.cursorline = true

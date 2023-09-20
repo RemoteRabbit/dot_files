@@ -3,5 +3,11 @@
 #
 # Author:  Tristan Jahnke
 
-./scripts/install-packages.sh
-./scripts/install-dotfiles.sh
+read -p "Would you like to install AwesomeWM " -n 1 -r
+echo ""
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+	./scripts/install-awesomewm.sh
+fi
+
+# ./scripts/install-packages.sh
+# ./scripts/install-dotfiles.sh
