@@ -1,5 +1,8 @@
 alias cat="bat"
 alias fedi="neonmodem"
+alias l="eza"
+alias la="eza --all --long"
+alias ll="eza --long"
 alias rm="trash -v"
 alias so="source $ZDOTDIR/.zshrc"
 alias vim="nvim"

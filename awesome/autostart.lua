@@ -4,6 +4,8 @@ local autorun = true
 
 local autorunScripts = {
 	"flameshot",
+	"nm-applet",
+	"picom",
 	"xrandr --output DisplayPort-1 --primary",
 }
 
