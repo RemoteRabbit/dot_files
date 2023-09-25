@@ -2,6 +2,7 @@
 TERM = "xterm-256color"
 
 live_config_reload = "true"
+import = [ "~/.config/alacritty/catppuccin/catppuccin-mocha.yml" ]
 
 [scrolling]
 history = 10000
