@@ -13,7 +13,7 @@
     l = log --pretty=oneline -n 20 --graph --abbrev-commit
    	lg = log --color --decorate --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an (%G?)>%Creset' --abbrev-commit
     s = status -s
-    p = "!git pull; git submodule foreach git pull origin master"
+    p = "!git pull; git submodule foreach git pull origin main"
     up = "!git push -u origin HEAD"
     # Show verbose output about tags, branches or remotes
 	#
