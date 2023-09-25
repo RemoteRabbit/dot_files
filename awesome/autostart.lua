@@ -3,6 +3,7 @@ local awful = require("awful")
 local autorun = true
 
 local autorunScripts = {
+	"dunst",
 	"flameshot",
 	"nm-applet",
 	"picom",
