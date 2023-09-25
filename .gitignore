@@ -5,3 +5,4 @@ homebrew/Brewfile.lock.json
 
 zsh/.zcompdump
 
+tmux/plugins
