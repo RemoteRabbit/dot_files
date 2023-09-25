@@ -3,7 +3,6 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
 
----------------------
 -- General Keymaps -------------------
 keymap.set("n", "<leader>l", ":Lazy<CR>", { desc = "Lazy" })
 keymap.set("n", "<leader>m", ":Mason<CR>", { desc = "Mason" })
