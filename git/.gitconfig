@@ -43,7 +43,7 @@
 	untracked = cyan
 
 [commit]
-	gpgsign = true
+	gpgsign = false
 
 [core]
 	editor = vim
@@ -91,8 +91,9 @@
 [user]
 	email = trjahnke@gmail.com
     name = Tristan Jahnke
-    signingkey = D7FAE6E3907AFD59D3FC98C269031F01E982EA9E
+    ; signingkey = D7FAE6E3907AFD59D3FC98C269031F01E982EA9E
     username = RemoteRabbit
+	signingkey = 0172279706FC09C7748C132B7B61F5482EE59E84
 
 [includeIf "gitdir:~/work/wendys/**"]
 	path = ~/dot_files/git/wendys.gitconfig
