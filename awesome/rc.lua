@@ -368,6 +368,10 @@ globalkeys = gears.table.join(
 		awful.util.spawn("rofi -show window")
 	end, { description = "rofi window", group = "Rofi" }),
 
+	awful.key({ modkey }, "l", function()
+		awful.util.spawn("i3lock")
+	end, { description = "lock computer", group = "client" }),
+
 	awful.key({ modkey }, "x", function()
 		awful.prompt.run({
 			prompt = "Run Lua code: ",
@@ -398,9 +402,9 @@ clientkeys = gears.table.join(
 	awful.key({ modkey }, "o", function(c)
 		c:move_to_screen()
 	end, { description = "move to screen", group = "client" }),
-	awful.key({ modkey }, "t", function(c)
-		c.ontop = not c.ontop
-	end, { description = "toggle keep on top", group = "client" }),
+	-- awful.key({ modkey }, "t", function(c)
+	-- 	c.on top = not c.on top
+	-- end, { description = "toggle keep on top", group = "client" }),
 	awful.key({ modkey }, "n", function(c)
 		-- The client currently has the input focus, so it cannot be
 		-- minimized, since minimized clients can't have the focus.
