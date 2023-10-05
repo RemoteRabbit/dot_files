@@ -21,8 +21,6 @@ hs.notify
 	})
 	:send()
 
-spoon.SpoonInstall:andUse("CircleClock")
-
 spoon.SpoonInstall:andUse("Calendar")
 
 spoon.SpoonInstall:andUse("WindowHalfsAndThirds", {
