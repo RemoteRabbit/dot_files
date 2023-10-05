@@ -15,6 +15,7 @@ return {
     nvimtree.setup({
       sort_by = "case_sensitive",
       view = {
+        side = "right",
         width = 30,
       },
       renderer = {
