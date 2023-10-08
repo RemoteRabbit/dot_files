@@ -32,11 +32,9 @@ COMPLETION_WAITING_DOTS="true"
 
 eval "$(starship init zsh)"
 
-# Plugin for auto suggestions
+# Plugins
 source $ZDOTDIR/shell-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-# Add vim bindings to shell
 source $ZDOTDIR/shell-plugins/zsh-vi-mode/zsh-vi-mode.zsh
-# Plugin for syntax highlighting
 source $ZDOTDIR/shell-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source $ZDOTDIR/shell-scripts/search.zsh
