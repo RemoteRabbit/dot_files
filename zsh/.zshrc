@@ -38,6 +38,11 @@ source $ZDOTDIR/shell-plugins/zsh-vi-mode/zsh-vi-mode.zsh
 source $ZDOTDIR/shell-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZDOTDIR/shell-scripts/search.zsh
 
+# Exports
+export FZF_DEFAULT_OPTS='--height=70% --preview="cat {}" --preview-window=right:60%:wrap'
+export FZF_DEFAULT_COMMAND='rg --files'
+export FZF_CTRL_T_COMMAND='$FZF_DEFAULT_COMMAND'
+
 pfetch
 
 # Used to check optimization
