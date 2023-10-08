@@ -53,8 +53,10 @@ awful.rules.rules = {
 		properties = { floating = true },
 	},
 
-	{ rule = { class = "discord" }, properties = { screen = 2, tag = "5" } },
+	{ rule = { class = "Microsoft Teams - Preview" }, properties = { screen = 2, tag = "3" } },
+	{ rule = { class = "Slack" }, properties = { screen = 2, tag = "3" } },
 	{ rule = { class = "steam" }, properties = { screen = 2, tag = "4" } },
+	{ rule = { class = "discord" }, properties = { screen = 2, tag = "5" } },
 
 	-- Gaming
 	{
@@ -72,7 +74,6 @@ awful.rules.rules = {
 		},
 		properties = { screen = 1, tag = "9" },
 	},
-	{ rule = { class = "Steam" }, properties = { screen = 2, tag = "8" } },
 
 	-- Add titlebars to normal clients and dialogs
 	{

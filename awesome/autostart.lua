@@ -1,19 +1,23 @@
 local awful = require("awful")
 
-local autorun = true
-
-local autorunScripts = {
+local apps = {
 	"discord",
 	"dunst",
 	"flameshot",
 	"nm-applet",
 	"picom",
+	"slack",
 	"steam",
-	"xrandr --output DisplayPort-1 --primary",
+	"teams",
+	"xrandr --output DP-2 --primary --mode 3840x2160 --rate 144",
+	"xrandr --output DP-3 --mode 3840x2160 --rate 144",
 }
 
-if autorun then
-	for script = 1, #autorunScripts do
-		awful.spawn.with_shell(autorunScripts[script])
-	end
+awful.spawn("alacritty", {
+	screen = 1,
+	tag = "1",
+})
+
+for _, app in pairs(apps) do
+	awful.spawn.single_instance(app)
 end
