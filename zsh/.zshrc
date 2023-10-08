@@ -36,7 +36,6 @@ eval "$(starship init zsh)"
 source $ZDOTDIR/shell-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZDOTDIR/shell-plugins/zsh-vi-mode/zsh-vi-mode.zsh
 source $ZDOTDIR/shell-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 source $ZDOTDIR/shell-scripts/search.zsh
 
 pfetch
