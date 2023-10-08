@@ -3,10 +3,12 @@ local awful = require("awful")
 local autorun = true
 
 local autorunScripts = {
+	"discord",
 	"dunst",
 	"flameshot",
 	"nm-applet",
 	"picom",
+	"steam",
 	"xrandr --output DisplayPort-1 --primary",
 }
 

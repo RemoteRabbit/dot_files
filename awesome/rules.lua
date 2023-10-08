@@ -53,7 +53,8 @@ awful.rules.rules = {
 		properties = { floating = true },
 	},
 
-	{ rule = { class = "discord" }, properties = { screen = 2, tag = "9" } },
+	{ rule = { class = "discord" }, properties = { screen = 2, tag = "5" } },
+	{ rule = { class = "steam" }, properties = { screen = 2, tag = "4" } },
 
 	-- Gaming
 	{
