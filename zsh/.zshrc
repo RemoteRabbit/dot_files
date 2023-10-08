@@ -34,6 +34,11 @@ source $ZDOTDIR/shell-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Plugin for syntax highlighting
 source $ZDOTDIR/shell-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Tmux start or attach
+if [ ! "$TMUX" ]; then
+  tmux attach -t core || tmux new -s core
+fi
+
 pfetch
 
 # Used to check optimization
