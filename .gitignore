@@ -3,7 +3,4 @@ homebrew/Brewfile.lock.json
 
 ~/dot_files/.config/variety/Downloaded/*
 
-zsh/.zcompdump
-zsh/.zsh_history
-
 tmux/plugins

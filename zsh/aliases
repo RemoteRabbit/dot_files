@@ -1,5 +1,6 @@
 alias cat="bat"
 alias fedi="neonmodem"
+alias sf="vim $(fzf)"
 alias ls="eza"
 alias la="eza --all --long"
 alias ll="eza --long"
@@ -10,3 +11,8 @@ alias rm="trash -v"
 alias so="source $ZDOTDIR/.zshrc"
 alias vim="nvim"
 alias z="zellij"
+
+fc() {
+  local dir
+  dir=$(find ${1:-.} -type d -not -path '*/\.*' 2> /dev/null | fzf +m) && cd "$dir"
+}
