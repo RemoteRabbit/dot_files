@@ -1,5 +1,11 @@
 # Used to check optimization
 zmodload zsh/zprof
+zmodload zsh/datetime
+setopt promptsubst
+PS4='+$EPOCHREALTIME %N:%i> '
+exec 3>&2 2> $ZDOTDIR/stats/startlog.$$
+setopt xtrace prompt_subst
+# -----------------------------------------
 
 source $ZDOTDIR/aliases
 
@@ -30,4 +36,7 @@ source $ZDOTDIR/shell-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 pfetch
 
-zprof > $HOME/dot_files/zsh/tmp
+# Used to check optimization
+unsetopt xtrace
+exec 2>&3 3>&-
+zprof > $ZDOTDIR/stats/zprof-stats
