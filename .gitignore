@@ -3,6 +3,7 @@ homebrew/Brewfile.lock.json
 
 ~/dot_files/.config/variety/Downloaded/*
 
+zsh/tmp
 zsh/.zcompdump
 zsh/.zsh_history
 

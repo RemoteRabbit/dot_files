@@ -1,3 +1,6 @@
+# Used to check optimization
+zmodload zsh/zprof
+
 source $ZDOTDIR/aliases
 
 # Plugin for not needing to use cd and better tab completion
@@ -26,3 +29,5 @@ source $ZDOTDIR/shell-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZDOTDIR/shell-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 pfetch
+
+zprof > $HOME/dot_files/zsh/tmp
