@@ -3,6 +3,10 @@
 function web_search() {
   emulate -L zsh
 
+  local open_cmd
+  [[ "$OSTYPE" = linux* ]] && open_cmd='xdg-open'
+  [[ "$OSTYPE" = darwin* ]] && open_cmd='open'
+
   # define search engine URLS
   typeset -A urls
   urls=(
@@ -35,7 +39,8 @@ function web_search() {
     url="${(j://:)${(s:/:)urls[$1]}[1,2]}"
   fi
 
-  xdg-open "$url"
+  # Open in background process
+  $open_cmd "$url" &> /dev/null &
 }
 
 
