@@ -6,6 +6,13 @@ PS4='+$EPOCHREALTIME %N:%i> '
 exec 3>&2 2> $ZDOTDIR/stats/startlog.$$
 setopt xtrace prompt_subst
 # -----------------------------------------
+# Tmux start or attach
+if [ ! "$TMUX" ]; then
+  cd $HOME/dot_files
+  tmux new -s dots -d
+  cd $HOME
+  tmux attach -t home || tmux new -s home
+fi
 
 source $ZDOTDIR/aliases
 
@@ -25,19 +32,11 @@ COMPLETION_WAITING_DOTS="true"
 
 eval "$(starship init zsh)"
 
-# Plugin for auto suggestions
+# Plugins
 source $ZDOTDIR/shell-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-# Add vim bindings to shell
 source $ZDOTDIR/shell-plugins/zsh-vi-mode/zsh-vi-mode.zsh
-# Plugin for syntax highlighting
 source $ZDOTDIR/shell-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 source $ZDOTDIR/shell-scripts/search.zsh
-
-# Tmux start or attach
-if [ ! "$TMUX" ]; then
-  tmux attach -t core || tmux new -s core
-fi
 
 pfetch
 
