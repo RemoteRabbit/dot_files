@@ -28,7 +28,7 @@ Currently using Lazy as my package manager
     <tr>
         <td><a href="https://github.com/windwp/nvim-autopairs"/>windwp/nvim-autopairs</td>
         <td>Second</td>
-        <td><a href="nvim/lua/Lazy/plugins/code/autopair.lua"/>autopair.lua</td>
+        <td><a href="lua/Lazy/plugins/code/autopair.lua"/>autopair.lua</td>
     </tr>
 </table>
 
