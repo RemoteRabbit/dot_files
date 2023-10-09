@@ -30,6 +30,11 @@ Currently using Lazy as my package manager
         <td>Allows for auto closing quotes and brackets.</td>
         <td align="center"><a href="lua/Lazy/plugins/code/autopair.lua"/>autopair.lua</td>
     </tr>
+    <tr>
+        <td><a href="https://github.com/windwp/nvim-autopairs"/>windwp/nvim-autopairs</td>
+        <td>Allows for auto closing quotes and brackets.</td>
+        <td align="center"><a href="lua/Lazy/plugins/code/autopair.lua"/>autopair.lua</td>
+    </tr>
 </table>
 
 ## Which-key help
