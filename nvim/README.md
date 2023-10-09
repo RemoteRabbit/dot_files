@@ -31,12 +31,11 @@ Currently using Lazy as my package manager
         <td><a href="https://github.com/numToStr/Comment.nvim"/>numToStr/Comment.nvim</td>
         <td>Allows for auto closing quotes and brackets.</td>
         <td align="center"><a href="lua/Lazy/plugins/code/comments.lua"/>code/comments.lua</td>
-    <<tr>
+    <tr>
         <td><a href="https://github.com/stevearc/conform.nvim"/>stevearc/conform.nvim</td>
         <td>Allows for auto closing quotes and brackets.</td>
         <td align="center"><a href="lua/Lazy/plugins/code/conform.lua"/>code/conform.lua</td>
     </tr>
-/tr>
 </table>
 
 ## Which-key help
