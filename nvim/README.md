@@ -23,18 +23,18 @@ Currently using Lazy as my package manager
         </th>
     </tr>
     <tr>
-        <td>[windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)</td>
+        <td><a href="https://github.com/windwp/nvim-autopairs"/>windwp/nvim-autopairs</td>
         <td>Allows for auto closing quotes and brackets.</td>
-        <td align="center">[autopair.lua](lua/Lazy/plugins/code/autopair.lua)</td>
+        <td align="center"><a href="lua/Lazy/plugins/code/autopair.lua"/>code/autopair.lua</td>
     </tr>
     <tr>
-        <td>[numToStr/Comment.nvim](https://github.com/numToStr/Comment.nvim)</td>
+        <td><a href="https://github.com/numToStr/Comment.nvim"/>numToStr/Comment.nvim</td>
         <td>Allows for auto closing quotes and brackets.</td>
-        <td align="center">[comments.lua](lua/Lazy/plugins/code/comments.lua)</td>
+        <td align="center"><a href="lua/Lazy/plugins/code/comments.lua"/>code/comments.lua</td>
     <<tr>
         <td><a href="https://github.com/stevearc/conform.nvim"/>stevearc/conform.nvim</td>
         <td>Allows for auto closing quotes and brackets.</td>
-        <td align="center"><a href="lua/Lazy/plugins/code/conform.lua"/>conform.lua</td>
+        <td align="center"><a href="lua/Lazy/plugins/code/conform.lua"/>code/conform.lua</td>
     </tr>
 /tr>
 </table>
