@@ -21,14 +21,14 @@ Currently using Lazy as my package manager
         <th align="center">
             <img width="220" height="1">
             <p>
-                <small>Link to config</small>
+                <small>Link to my config</small>
             </p>
         </th>
     </tr>
     <tr>
         <td><a href="https://github.com/windwp/nvim-autopairs"/>windwp/nvim-autopairs</td>
         <td>Allows for auto closing quotes and brackets.</td>
-        <td><a href="lua/Lazy/plugins/code/autopair.lua"/>autopair.lua</td>
+        <td align="center"><a href="lua/Lazy/plugins/code/autopair.lua"/>autopair.lua</td>
     </tr>
 </table>
 
