@@ -13,7 +13,7 @@ Currently using Lazy as my package manager
             </p>
         </th>
         <th align="center">
-            <img width="442" height="1">
+            <img width="450" height="1">
             <p>
                 <small>What does it do?</small>
             </p>
