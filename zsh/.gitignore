@@ -1,4 +1,4 @@
 stats/
 .zcompdump
 .zsh_history
-.zsh_seesion*
+.zsh_sessions/*
