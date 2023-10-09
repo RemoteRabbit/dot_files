@@ -6,20 +6,20 @@ Currently using Lazy as my package manager
 
 <table>
     <tr>
-        <th align="center">
-            <img width="220" height="1">
+        <th align="center", width="250">
+            <!-- <img width="220" height="1"> -->
             <p>
                 <small>Plugin</small>
             </p>
         </th>
-        <th align="center">
-            <img width="450" height="1">
+        <th align="center", width="500">
+            <!-- <img width="450" height="1"> -->
             <p>
                 <small>What does it do?</small>
             </p>
         </th>
-        <th align="center">
-            <img width="220" height="1">
+        <th align="center", width="250">
+            <!-- <img width="220" height="1"> -->
             <p>
                 <small>Link to my config</small>
             </p>
