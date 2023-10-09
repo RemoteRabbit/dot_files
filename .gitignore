@@ -1,8 +1,1 @@
-nvim/plugin/packer_compiled.lua
-nvim/lazy-lock.json
-
 homebrew/Brewfile.lock.json
-
-~/dot_files/.config/variety/Downloaded/*
-
-tmux/plugins
