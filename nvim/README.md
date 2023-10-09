@@ -7,34 +7,36 @@ Currently using Lazy as my package manager
 <table>
     <tr>
         <th align="center", width="250">
-            <!-- <img width="220" height="1"> -->
             <p>
                 <small>Plugin</small>
             </p>
         </th>
         <th align="center", width="500">
-            <!-- <img width="450" height="1"> -->
             <p>
                 <small>What does it do?</small>
             </p>
         </th>
         <th align="center", width="250">
-            <!-- <img width="220" height="1"> -->
             <p>
                 <small>Link to my config</small>
             </p>
         </th>
     </tr>
     <tr>
-        <td><a href="https://github.com/windwp/nvim-autopairs"/>windwp/nvim-autopairs</td>
+        <td>[windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)</td>
         <td>Allows for auto closing quotes and brackets.</td>
-        <td align="center"><a href="lua/Lazy/plugins/code/autopair.lua"/>autopair.lua</td>
+        <td align="center">[autopair.lua](lua/Lazy/plugins/code/autopair.lua)</td>
     </tr>
     <tr>
-        <td><a href="https://github.com/windwp/nvim-autopairs"/>windwp/nvim-autopairs</td>
+        <td>[numToStr/Comment.nvim](https://github.com/numToStr/Comment.nvim)</td>
         <td>Allows for auto closing quotes and brackets.</td>
-        <td align="center"><a href="lua/Lazy/plugins/code/autopair.lua"/>autopair.lua</td>
+        <td align="center">[comments.lua](lua/Lazy/plugins/code/comments.lua)</td>
+    <<tr>
+        <td><a href="https://github.com/stevearc/conform.nvim"/>stevearc/conform.nvim</td>
+        <td>Allows for auto closing quotes and brackets.</td>
+        <td align="center"><a href="lua/Lazy/plugins/code/conform.lua"/>conform.lua</td>
     </tr>
+/tr>
 </table>
 
 ## Which-key help
