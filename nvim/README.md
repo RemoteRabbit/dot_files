@@ -7,7 +7,6 @@ Currently using Lazy as my package manager
 <table>
     <tr>
         <th align="center">
-            <img width="441" height="1">
             <p>
             <small>
             EXAMPLE TEXT
@@ -15,7 +14,6 @@ Currently using Lazy as my package manager
             </p>
         </th>
     <th align="center">
-<img width="441" height="1">
 <p>
 <small>
 EXAMPLE TEXT
