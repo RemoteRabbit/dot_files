@@ -4,7 +4,34 @@ Currently using Lazy as my package manager
 
 ## What is each plugin
 
-<table will go here>
+<table>
+    <tr>
+        <th align="center">
+            <img width="441" height="1">
+            <p>
+            <small>
+            EXAMPLE TEXT
+            </small>
+            </p>
+        </th>
+    <th align="center">
+<img width="441" height="1">
+<p>
+<small>
+EXAMPLE TEXT
+</small>
+</p>
+</th>
+</tr>
+<tr>
+<td>
+First  
+</td>
+<td>
+Second  
+</td>
+</tr>
+</table>
 
 ## Which-key help
 
