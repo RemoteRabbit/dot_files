@@ -27,7 +27,7 @@ Currently using Lazy as my package manager
     </tr>
     <tr>
         <td><a href="https://github.com/windwp/nvim-autopairs"/>windwp/nvim-autopairs</td>
-        <td>Second</td>
+        <td>Allows for auto closing quotes and brackets.</td>
         <td><a href="lua/Lazy/plugins/code/autopair.lua"/>autopair.lua</td>
     </tr>
 </table>
