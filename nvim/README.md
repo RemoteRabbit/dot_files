@@ -7,28 +7,29 @@ Currently using Lazy as my package manager
 <table>
     <tr>
         <th align="center">
+            <img width="220" height="1">
             <p>
-            <small>
-            EXAMPLE TEXT
-            </small>
+                <small>Plugin</small>
             </p>
         </th>
-    <th align="center">
-<p>
-<small>
-EXAMPLE TEXT
-</small>
-</p>
-</th>
-</tr>
-<tr>
-<td>
-First  
-</td>
-<td>
-Second  
-</td>
-</tr>
+        <th align="center">
+            <img width="442" height="1">
+            <p>
+                <small>What does it do?</small>
+            </p>
+        </th>
+        <th align="center">
+            <img width="220" height="1">
+            <p>
+                <small>Link to config</small>
+            </p>
+        </th>
+    </tr>
+    <tr>
+        <td>First</td>
+        <td>Second</td>
+        <td>third</td>
+    </tr>
 </table>
 
 ## Which-key help
