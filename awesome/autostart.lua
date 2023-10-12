@@ -13,11 +13,11 @@ local apps = {
 	"xrandr --output DP-3 --mode 3840x2160 --rate 144",
 }
 
-awful.spawn("alacritty", {
+awful.spawn.once("alacritty", {
 	screen = 1,
 	tag = "1",
 })
 
 for _, app in pairs(apps) do
-	awful.spawn.single_instance(app)
+	awful.spawn.once(app)
 end
