@@ -1,6 +1,7 @@
 local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
+local beautiful = require("beautiful")
 
 local gfs = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir()
@@ -23,10 +24,17 @@ theme.fg_urgent = palette.red.hex
 theme.fg_minimize = palette.rosewater.hex
 
 theme.useless_gap = dpi(10)
-theme.border_width = dpi(1)
-theme.border_normal = palette.sky.hex
-theme.border_focus = palette.rosewater.hex
+theme.border_width = dpi(5)
+theme.border_normal = palette.base.hex
+theme.border_focus = palette.sapphire.hex
 theme.border_marked = palette.red.hex
+
+client.connect_signal("focus", function(c)
+	c.border_color = theme.border_focus
+end)
+client.connect_signal("unfocus", function(c)
+	c.border_color = theme.border_normal
+end)
 
 -- Generate taglist squares:
 local taglist_square_size = dpi(4)
