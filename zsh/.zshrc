@@ -8,10 +8,8 @@ setopt xtrace prompt_subst
 # -----------------------------------------
 # Tmux start or attach
 if [ ! "$TMUX" ]; then
-  cd $HOME/dot_files
-  tmux new -s dots -d
-  cd $HOME
-  tmux attach -t home || tmux new -s home
+  tmux new-session -s dots -d -c $HOME/dot_files
+  tmux attach -t home || tmux new-session -s home -c $HOME
 fi
 
 source $ZDOTDIR/aliases
