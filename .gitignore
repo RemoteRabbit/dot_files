@@ -1,2 +1,5 @@
 homebrew/Brewfile.lock.json
 
+zsh/.zcompcache/
+zsh/.zshrc.swp
+
