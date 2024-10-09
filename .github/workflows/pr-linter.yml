@@ -27,7 +27,7 @@ jobs:
             fix
             refactor
             revert
-          scope: |
+          scopes: |
             core
             nvim
             tmux
