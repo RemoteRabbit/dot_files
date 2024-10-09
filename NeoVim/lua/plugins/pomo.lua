@@ -42,6 +42,17 @@ return {
       -- { init = function(timer) ... end }
     },
 
+    sessions = {
+      pomo = {
+        { name = "Work",        duration = "25m" },
+        { name = "Short Break", duration = "5m" },
+        { name = "Work",        duration = "25m" },
+        { name = "Short Break", duration = "5m" },
+        { name = "Work",        duration = "25m" },
+        { name = "Long Break",  duration = "15m" },
+      }
+    },
+
     -- Override the notifiers for specific timer names.
     timers = {
       -- For example, use only the "System" notifier when you create a timer called "Break",
