@@ -1,0 +1,3 @@
+return {
+  "paretje/nvim-man",
+}
