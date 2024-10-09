@@ -1,0 +1,28 @@
+[url "git@personal:github"]
+  insteadOf = "https://github.com/github"
+  insteadOf = "github:github"
+  insteadOf = "git://github.com/github"
+
+[url "git@personal:"]
+  pushInsteadOf = "https://github.com/"
+  pushInsteadOf = "github:"
+  pushInsteadOf = "git://github.com/"
+
+[url "git://personal/"]
+  insteadOf = "github:"
+
+[url "git@gist.personal:"]
+  insteadOf = "gst:"
+  pushInsteadOf = "gist:"
+  pushInsteadOf = "git://gist.github.com/"
+
+[url "git://gist.personal/"]
+  insteadOf = "gist:"
+
+[user]
+  email = trjahnke@protonmail.com
+  name = Tristan Jahnke
+  username = RemoteRabbit
+
+[core]
+  sshCommand = "ssh -i ~/.ssh/proton"

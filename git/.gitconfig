@@ -86,14 +86,10 @@
 	pushInsteadOf = "git://gist.github.com/"
 
 [url "git://gist.github.com/"]
-	insteadOf = "gist:"
+  insteadOf = "gist:"
 
-[user]
-	email = trjahnke@gmail.com
-    name = Tristan Jahnke
-    ; signingkey = D7FAE6E3907AFD59D3FC98C269031F01E982EA9E
-    username = RemoteRabbit
-	signingkey = 0172279706FC09C7748C132B7B61F5482EE59E84
+[includeIf "gitdir:~/repos/personal/**"]
+  path = ~/repos/personal/dot_files/git/personal.gitconfig
 
-[includeIf "gitdir:~/work/wendys/**"]
-	path = ~/dot_files/git/wendys.gitconfig
+[includeIf "gitdir:~/repos/work/**"]
+	path = ~/repos/personal/dot_files/git/work.gitconfig
