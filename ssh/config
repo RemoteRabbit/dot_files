@@ -1,7 +1,14 @@
-Host github.com
-    HostName github.com
-    IdentityFile ~/.ssh/personal-github
+# Personal GitHub account
+Host github.com-personal
+  HostName github.com
+  AddKeysToAgent yes
+  User git
+  IdentityFile ~/.ssh/proton
 
-Host git@gitlab.com
-    HostName git@gitlab.com
-    IdentityFile ~/.ssh/wendys
+# Work GitHub account
+Host github.com-work
+  HostName github.com
+  AddKeysToAgent yes
+  User git
+  IdentityFile ~/.ssh/<client name>
+
