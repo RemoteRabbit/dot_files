@@ -28,8 +28,10 @@ jobs:
             refactor
             revert
           scopes: |
+            git
             main
             nvim
+            ssh
             tmux
             zsh
           requireScope: true
