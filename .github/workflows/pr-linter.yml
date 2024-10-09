@@ -28,6 +28,7 @@ jobs:
             refactor
             revert
           scope: |
+            core
             nvim
             tmux
             zsh
