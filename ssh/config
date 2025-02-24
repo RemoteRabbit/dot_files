@@ -10,5 +10,3 @@ Host github.com-work
   HostName github.com
   AddKeysToAgent yes
   User git
-  IdentityFile ~/.ssh/<client name>
-
